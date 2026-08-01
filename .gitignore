@@ -1,0 +1,43 @@
+# Financial statements
+data/inbox/*
+data/processed/*
+data/rejected/*
+data/samples/*
+
+# Keep directory structure
+!data/inbox/.gitkeep
+!data/processed/.gitkeep
+!data/rejected/.gitkeep
+!data/samples/.gitkeep
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated reports
+reports/*
+exports/*
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/    # 忽略任意位置中，名字为 __pycache__ 的目录，以及目录里的所有内容。
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
