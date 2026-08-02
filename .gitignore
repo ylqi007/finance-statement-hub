@@ -41,3 +41,6 @@ venv/
 .vscode/
 .idea/
 .DS_Store
+
+# Local sensitive test files
+/tmp/

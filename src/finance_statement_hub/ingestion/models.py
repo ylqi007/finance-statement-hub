@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from enum import StrEnum
 from pathlib import Path
 
 
@@ -13,3 +14,15 @@ class DocumentCandidate:
     extension: str
     size_bytes: int
     sha256: str
+
+
+class IngestionOutcome(StrEnum):
+    IMPORTED = "Imported"
+    DUPLICATE = "Duplicate"
+
+
+@dataclass(frozen=True, slots=True)
+class DocumentIngestionResult:
+    document: DocumentCandidate
+    outcome: IngestionOutcome
+    document_id: int | None = None
